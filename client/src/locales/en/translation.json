@@ -117,14 +117,15 @@
     "titleOne": "Rent this property ",
     "titleTwo": "deposit-free",
     "leftTextOne": "We are excited about your upcoming move with Habitat and we want to make it as easy and cost-effective for you as possible!",
-    "leftTextTwo": "This is why this community is deposit-free.",
+    "leftTextTwo": "This is why this apartment is deposit-free.",
     "leftTextThree": "No need to pay any deposit upfront. Just register with your debit card details.",
     "name": "Full name: ",
     "email": "Email: ",
     "phone": "Phone: ",
     "creditCard": "Debit card details",
     "subcreditcard": "Remember, you must list the account where you receive your income",
-    "warningcreditcard": " * Authorization only, limited to the amount of 1 month of rent",
+    "warningcreditcardOne": " * Authorization only, limited to the amount of 1 month of rent",
+    "warningcreditcardTwo": " * Authorization only, limited to the amount of 2 months of rent",
     "checkBoxOne": "By sending the information above you confirm you have read and accept the",
     "checkBoxTwo": "Terms and Conditions",
     "checkBoxThree": "Privacy Policy",
@@ -134,12 +135,14 @@
   "cardsuccess": {
     "title": "You are already part of Habitat!",
     "textOne": "Awesome, we have received your details!",
-    "textTwo": "We will get in touch with you shortly to complete the process."
+    "textTwo": "We will get in touch with you shortly to complete the process.",
+    "imageAltAgency": "Habitat Apartments logo",
+    "imageAltRimbo": "Rimbo Rent Logo"
   },
   "404Page": {
     "header": "404 error page - Habitat & Rimbo",
     "title": "Error 404 - The page you are looking for doesn't exist 😔",
     "subtitle": "Please, reload the latest link you have received, or get in touch with us:",
-    "paragraph": "Email: info@rimbo.rent or WhatsApp: +34 623 063 769"
+    "paragraph": "Email: info@rimbo.rent or Telephone: +34 623 063 769"
   }
 }

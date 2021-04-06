@@ -37,6 +37,7 @@ const stripe = new Stripe(process.env.SECRET_KEY);
 const __dirname = path.resolve();
 app.use(express.static("."));
 app.use(express.static(path.join(__dirname, "")));
+app.use(express.static(__dirname + "/public"));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

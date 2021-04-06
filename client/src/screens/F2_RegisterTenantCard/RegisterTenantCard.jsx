@@ -22,7 +22,7 @@ import WhatsappBubble from "../../components/WhatsappBubble/WhatsappBubble";
 // Images
 import RimboLogo from "../../images/rimbo-logo.png";
 import StripeLogo from "../../images/secure-payments.png";
-import StarCityImage from "../../images/starcity-image.png";
+import HabitatImage from "../../images/undraw_house_searching_n8mp.svg";
 
 // Styles
 import Loader from "react-loader-spinner";
@@ -229,7 +229,7 @@ const RegisterTenantCard = ({ t }) => {
             tenantsPhone,
             timestamps,
             agencyName: tenancyData.agent.agencyName,
-            building: tenancyData.property.building,
+            rentalAddress: tenancyData.property.rentalAddress,
             rentStartDate: tenancyData.rentStartDate,
             rentEndDate: tenancyData.rentEndDate,
           });
@@ -240,7 +240,7 @@ const RegisterTenantCard = ({ t }) => {
             tenantsPhone,
             timestamps,
             agencyName: tenancyData.agent.agencyName,
-            building: tenancyData.property.building,
+            rentalAddress: tenancyData.property.rentalAddress,
             rentStartDate: tenancyData.rentStartDate,
             rentEndDate: tenancyData.rentEndDate,
           });
@@ -330,7 +330,15 @@ const RegisterTenantCard = ({ t }) => {
                           onChange={handleCardDetailsChange}
                           className={style.tarjeta}
                         />
-                        <p>{t("F2TT.warningcreditcard")}</p>
+
+                        {tenancyData.product === "1 month" ||
+                        tenancyData.product === "1 mes" ? (
+                          <p>{t("F2TT.warningcreditcardOne")}</p>
+                        ) : (
+                          <p>{t("F2TT.warningcreditcardTwo")}</p>
+                        )}
+
+                        {/* <p>{t("F2TT.warningcreditcard")}</p> */}
                       </label>
 
                       <div className={style.ErrorInput}>
@@ -424,12 +432,12 @@ const RegisterTenantCard = ({ t }) => {
                 <p>{t("cardsuccess.textTwo")}</p>
               </div>
               <div className={style.success_container_right}>
-                <img src={StarCityImage} alt="StarCity co-living logo" />
+                <img src={HabitatImage} alt={t("cardsuccess.imageAltAgency")} />
               </div>
             </main>
             <div className={style.rimbo_sign_success}>
               <h4>Powered by</h4>
-              <img src={RimboLogo} alt="Rimbo Rent Logo" />
+              <img src={RimboLogo} alt={t("cardsuccess.imageAltRimbo")} />
             </div>
           </>
         </div>

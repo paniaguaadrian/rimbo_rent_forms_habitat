@@ -62,8 +62,8 @@ const ApprovedTenantRimbo = ({ t }) => {
 
       const { tenantsName, tenantsEmail, randomID } = tenancyData.tenant;
       const { agencyName } = tenancyData.agent;
-      const { building, room } = tenancyData.property;
-      const { tenancyID, rentStartDate, rentEndDate } = tenancyData;
+      const { rentalAddress } = tenancyData.property;
+      const { tenancyID } = tenancyData;
 
       if (tenancyData.tenant.isRimboAccepted === false) {
         axios.post(`${REACT_APP_BASE_URL_EMAIL}/e2tt`, {
@@ -71,11 +71,8 @@ const ApprovedTenantRimbo = ({ t }) => {
           tenantsEmail,
           randomID,
           agencyName,
-          building,
-          room,
+          rentalAddress,
           tenancyID,
-          rentStartDate,
-          rentEndDate,
         });
       }
 

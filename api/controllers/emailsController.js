@@ -8,7 +8,7 @@ import hbs from "nodemailer-express-handlebars";
 const testEmail = "paniaguasanchezadrian@gmail.com";
 
 // ? =======>  SPANISH VERSION START ==============================>
-// ! F1SC Form => E1R (email to Rimbo) E1HA (email to Habitat)
+// ! F1HA Form => E1R (email to Rimbo) E1HA (email to Habitat)
 const sendF1HAFormEmails = async (req, res) => {
   const {
     // Agency
@@ -175,15 +175,29 @@ const sendF1HAFormEmails = async (req, res) => {
 // ! E1R Email => E2TT (email to Tenant)
 const sendE1REmailEmails = async (req, res) => {
   const {
+    // Agency
+    agencyName,
+    // Tenant
     tenantsName,
     tenantsEmail,
+    tenantsPhone,
+    tenantsAddress,
+    tenantsZipCode,
+    documentType,
+    documentNumber,
+    documentImageFront,
+    documentImageBack,
     randomID,
-    agencyName,
-    building,
-    room,
-    tenancyID,
+    // Tenancy
+    product,
+    rentAmount,
     rentStartDate,
     rentEndDate,
+    tenancyID,
+    // Property
+    rentalAddress,
+    rentalCity,
+    rentalPostalCode,
   } = req.body;
 
   const transporterE2TT = nodemailer.createTransport(
@@ -219,15 +233,29 @@ const sendE1REmailEmails = async (req, res) => {
     ],
     template: "E2TTEmail",
     context: {
+      // Agency
+      agencyName,
+      // Tenant
       tenantsName,
       tenantsEmail,
+      tenantsPhone,
+      tenantsAddress,
+      tenantsZipCode,
+      documentType,
+      documentNumber,
+      documentImageFront,
+      documentImageBack,
       randomID,
-      agencyName,
-      building,
-      room,
-      tenancyID,
+      // Tenancy
+      product,
+      rentAmount,
       rentStartDate,
       rentEndDate,
+      tenancyID,
+      // Property
+      rentalAddress,
+      rentalCity,
+      rentalPostalCode,
     },
   };
 
@@ -242,7 +270,7 @@ const sendE1REmailEmails = async (req, res) => {
   res.status(200).json();
 };
 
-// ! F2SC Form => E2R (email to Rimbo that informs tenant is on F2SC)
+// ! F2HA Form => E2R (email to Rimbo that informs tenant is on F2SC)
 const sendNotificationRimbo = async (req, res) => {
   const {
     tenantsName,
@@ -304,15 +332,32 @@ const sendNotificationRimbo = async (req, res) => {
   res.status(200).json();
 };
 
-// ! F2SC Form => E3 (Rimbo, tenant, StarCity)
+// ! F2HA Form => E3 (Rimbo, tenant, StarCity)
 const sendF2SCFormEmails = async (req, res) => {
   const {
+    // Agency
+    agencyName,
+    // Tenant
     tenantsName,
     tenantsEmail,
-    agencyName,
-    building,
+    tenantsPhone,
+    tenantsAddress,
+    tenantsZipCode,
+    documentType,
+    documentNumber,
+    documentImageFront,
+    documentImageBack,
+    randomID,
+    // Tenancy
+    product,
+    rentAmount,
     rentStartDate,
     rentEndDate,
+    tenancyID,
+    // Property
+    rentalAddress,
+    rentalCity,
+    rentalPostalCode,
   } = req.body;
 
   const transporterE3R = nodemailer.createTransport(
@@ -380,12 +425,29 @@ const sendF2SCFormEmails = async (req, res) => {
     ],
     template: "E3REmail",
     context: {
+      // Agency
+      agencyName,
+      // Tenant
       tenantsName,
       tenantsEmail,
-      agencyName,
-      building,
+      tenantsPhone,
+      tenantsAddress,
+      tenantsZipCode,
+      documentType,
+      documentNumber,
+      documentImageFront,
+      documentImageBack,
+      randomID,
+      // Tenancy
+      product,
+      rentAmount,
       rentStartDate,
       rentEndDate,
+      tenancyID,
+      // Property
+      rentalAddress,
+      rentalCity,
+      rentalPostalCode,
     },
   };
   // Tenant Email
@@ -407,12 +469,29 @@ const sendF2SCFormEmails = async (req, res) => {
     ],
     template: "E3TTEmail",
     context: {
+      // Agency
+      agencyName,
+      // Tenant
       tenantsName,
       tenantsEmail,
-      agencyName,
-      building,
+      tenantsPhone,
+      tenantsAddress,
+      tenantsZipCode,
+      documentType,
+      documentNumber,
+      documentImageFront,
+      documentImageBack,
+      randomID,
+      // Tenancy
+      product,
+      rentAmount,
       rentStartDate,
       rentEndDate,
+      tenancyID,
+      // Property
+      rentalAddress,
+      rentalCity,
+      rentalPostalCode,
     },
   };
   // Starcity Email
@@ -430,12 +509,29 @@ const sendF2SCFormEmails = async (req, res) => {
     ],
     template: "E3SCEmail",
     context: {
+      // Agency
+      agencyName,
+      // Tenant
       tenantsName,
       tenantsEmail,
-      agencyName,
-      building,
+      tenantsPhone,
+      tenantsAddress,
+      tenantsZipCode,
+      documentType,
+      documentNumber,
+      documentImageFront,
+      documentImageBack,
+      randomID,
+      // Tenancy
+      product,
+      rentAmount,
       rentStartDate,
       rentEndDate,
+      tenancyID,
+      // Property
+      rentalAddress,
+      rentalCity,
+      rentalPostalCode,
     },
   };
 
@@ -468,7 +564,7 @@ const sendF2SCFormEmails = async (req, res) => {
 // ? =======>  SPANISH VERSION END ==============================>
 ////////////////////////////////////////////////////////////////
 // ? =======>  ENGLISH VERSION START ==============================>
-// ! F1SC Form => E1R
+// ! F1HA Form => E1R
 const sendHAFormEmailsEn = async (req, res) => {
   const {
     // Agency
@@ -635,15 +731,29 @@ const sendHAFormEmailsEn = async (req, res) => {
 // ! E1R Email => E2TT (email to Tenant)
 const sendE1REmailEmailsEn = async (req, res) => {
   const {
+    // Agency
+    agencyName,
+    // Tenant
     tenantsName,
     tenantsEmail,
+    tenantsPhone,
+    tenantsAddress,
+    tenantsZipCode,
+    documentType,
+    documentNumber,
+    documentImageFront,
+    documentImageBack,
     randomID,
-    agencyName,
-    building,
-    room,
-    tenancyID,
+    // Tenancy
+    product,
+    rentAmount,
     rentStartDate,
     rentEndDate,
+    tenancyID,
+    // Property
+    rentalAddress,
+    rentalCity,
+    rentalPostalCode,
   } = req.body;
 
   const transporterE2TT = nodemailer.createTransport(
@@ -679,15 +789,29 @@ const sendE1REmailEmailsEn = async (req, res) => {
     ],
     template: "E2TTEmailEn",
     context: {
+      // Agency
+      agencyName,
+      // Tenant
       tenantsName,
       tenantsEmail,
+      tenantsPhone,
+      tenantsAddress,
+      tenantsZipCode,
+      documentType,
+      documentNumber,
+      documentImageFront,
+      documentImageBack,
       randomID,
-      agencyName,
-      building,
-      room,
-      tenancyID,
+      // Tenancy
+      product,
+      rentAmount,
       rentStartDate,
       rentEndDate,
+      tenancyID,
+      // Property
+      rentalAddress,
+      rentalCity,
+      rentalPostalCode,
     },
   };
 
@@ -702,7 +826,7 @@ const sendE1REmailEmailsEn = async (req, res) => {
   res.status(200).json();
 };
 
-// ! F2SC Form => E2R (email to Rimbo that informs tenant is on F2SC)
+// ! F2HA Form => E2R (email to Rimbo that informs tenant is on F2SC)
 const sendNotificationRimboEn = async (req, res) => {
   const {
     tenantsName,
@@ -764,15 +888,32 @@ const sendNotificationRimboEn = async (req, res) => {
   res.status(200).json();
 };
 
-// ! F2SC Form => E3 (Rimbo, tenant, StarCity)
+// ! F2HA Form => E3 (Rimbo, tenant, StarCity)
 const sendF2SCFormEmailsEn = async (req, res) => {
   const {
+    // Agency
+    agencyName,
+    // Tenant
     tenantsName,
     tenantsEmail,
-    agencyName,
-    building,
+    tenantsPhone,
+    tenantsAddress,
+    tenantsZipCode,
+    documentType,
+    documentNumber,
+    documentImageFront,
+    documentImageBack,
+    randomID,
+    // Tenancy
+    product,
+    rentAmount,
     rentStartDate,
     rentEndDate,
+    tenancyID,
+    // Property
+    rentalAddress,
+    rentalCity,
+    rentalPostalCode,
   } = req.body;
 
   const transporterE3R = nodemailer.createTransport(
@@ -840,12 +981,29 @@ const sendF2SCFormEmailsEn = async (req, res) => {
     ],
     template: "E3REmailEn",
     context: {
+      // Agency
+      agencyName,
+      // Tenant
       tenantsName,
       tenantsEmail,
-      agencyName,
-      building,
+      tenantsPhone,
+      tenantsAddress,
+      tenantsZipCode,
+      documentType,
+      documentNumber,
+      documentImageFront,
+      documentImageBack,
+      randomID,
+      // Tenancy
+      product,
+      rentAmount,
       rentStartDate,
       rentEndDate,
+      tenancyID,
+      // Property
+      rentalAddress,
+      rentalCity,
+      rentalPostalCode,
     },
   };
   // Tenant Email
@@ -868,12 +1026,29 @@ const sendF2SCFormEmailsEn = async (req, res) => {
     ],
     template: "E3TTEmailEn",
     context: {
+      // Agency
+      agencyName,
+      // Tenant
       tenantsName,
       tenantsEmail,
-      agencyName,
-      building,
+      tenantsPhone,
+      tenantsAddress,
+      tenantsZipCode,
+      documentType,
+      documentNumber,
+      documentImageFront,
+      documentImageBack,
+      randomID,
+      // Tenancy
+      product,
+      rentAmount,
       rentStartDate,
       rentEndDate,
+      tenancyID,
+      // Property
+      rentalAddress,
+      rentalCity,
+      rentalPostalCode,
     },
   };
   // Starcity Email
@@ -891,12 +1066,29 @@ const sendF2SCFormEmailsEn = async (req, res) => {
     ],
     template: "E3SCEmailEn",
     context: {
+      // Agency
+      agencyName,
+      // Tenant
       tenantsName,
       tenantsEmail,
-      agencyName,
-      building,
+      tenantsPhone,
+      tenantsAddress,
+      tenantsZipCode,
+      documentType,
+      documentNumber,
+      documentImageFront,
+      documentImageBack,
+      randomID,
+      // Tenancy
+      product,
+      rentAmount,
       rentStartDate,
       rentEndDate,
+      tenancyID,
+      // Property
+      rentalAddress,
+      rentalCity,
+      rentalPostalCode,
     },
   };
 
