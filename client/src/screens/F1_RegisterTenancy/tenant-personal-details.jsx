@@ -35,7 +35,7 @@ import PlacesAutocomplete, {
 const {
   REACT_APP_BASE_URL,
   REACT_APP_API_RIMBO_TENANCY,
-  REACT_APP_API_RIMBO_TENANCY_STARCITY,
+  REACT_APP_API_RIMBO_TENANCY_HABITAT,
   REACT_APP_API_RIMBO_TENANT,
   REACT_APP_BASE_URL_EMAIL,
 } = process.env;
@@ -46,7 +46,6 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
   const [tenantsAddress, setTenantsAddress] = useState("");
   const [tenantsZipCode, setTenantsZipCode] = useState("");
   const [responseData, setResponseData] = useState([]); // eslint-disable-line
-  // const [sent, setSent] = useState(false); // eslint-disable-line
   const [files, setFiles] = useState({
     DF: null,
     DB: null,
@@ -118,20 +117,19 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
         tenantsZipCode: data.tenant.tenantsZipCode,
         documentType: data.tenant.documentType,
         documentNumber: data.tenant.documentNumber,
-        monthlyNetIncome: data.tenant.monthlyNetIncome,
-        jobType: data.tenant.jobType,
         documentImageFront: data.tenant.documentImageFront,
         documentImageBack: data.tenant.documentImageBack,
         randomID: data.tenant.randomID,
         //  Tenancy
+        product: data.product,
         rentAmount: data.rentAmount,
-        acceptanceCriteria: data.acceptanceCriteria,
         rentStartDate: data.rentStartDate.slice(0, 10),
         rentEndDate: data.rentEndDate.slice(0, 10),
         tenancyID: data.tenancyID,
         // Property
-        building: data.property.building,
-        room: data.property.room,
+        rentalAddress: data.property.rentalAddress,
+        rentalCity: data.property.rentalCity,
+        rentalPostalCode: data.property.rentalPostalCode,
       });
     } else {
       await axios.post(`${REACT_APP_BASE_URL_EMAIL}/e1r`, {
@@ -145,20 +143,19 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
         tenantsZipCode: data.tenant.tenantsZipCode,
         documentType: data.tenant.documentType,
         documentNumber: data.tenant.documentNumber,
-        monthlyNetIncome: data.tenant.monthlyNetIncome,
-        jobType: data.tenant.jobType,
         documentImageFront: data.tenant.documentImageFront,
         documentImageBack: data.tenant.documentImageBack,
         randomID: data.tenant.randomID,
         //  Tenancy
+        product: data.product,
         rentAmount: data.rentAmount,
-        acceptanceCriteria: data.acceptanceCriteria,
-        rentStartDate: data.rentStartDate,
-        rentEndDate: data.rentEndDate,
+        rentStartDate: data.rentStartDate.slice(0, 10),
+        rentEndDate: data.rentEndDate.slice(0, 10),
         tenancyID: data.tenancyID,
         // Property
-        building: data.property.building,
-        room: data.property.room,
+        rentalAddress: data.property.rentalAddress,
+        rentalCity: data.property.rentalCity,
+        rentalPostalCode: data.property.rentalPostalCode,
       });
     }
   };
@@ -176,7 +173,6 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
       })
       .then((responseData) => {
         setResponseData(responseData);
-        // setSent((prevSent) => !prevSent);
         return responseData; // return data from here
       })
       .catch((err) => console.log(err));
@@ -192,7 +188,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
 
     //  Send regular data to DB
     await axios.post(
-      `${REACT_APP_BASE_URL}${REACT_APP_API_RIMBO_TENANCY_STARCITY}`,
+      `${REACT_APP_BASE_URL}${REACT_APP_API_RIMBO_TENANCY_HABITAT}`,
       {
         //  Agency
         agencyName: tenancy.agencyName,
@@ -205,19 +201,18 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
         tenantsZipCode: tenantsZipCode,
         documentType: tenancy.tenantPersonalDetails.documentType,
         documentNumber: tenancy.tenantPersonalDetails.documentNumber,
-        monthlyNetIncome: tenancy.tenantPersonalDetails.monthlyNetIncome,
-        jobType: tenancy.tenantPersonalDetails.jobType,
         propertyManagerName: tenancy.agencyName,
         randomID: randomID,
         //  Tenancy
+        product: tenancy.propertyDetails.product,
         rentAmount: tenancy.propertyDetails.rentAmount,
-        acceptanceCriteria: tenancy.propertyDetails.acceptanceCriteria,
         rentStartDate: tenancy.propertyDetails.rentStartDate,
         rentEndDate: tenancy.propertyDetails.rentEndDate,
         tenancyID: randomID,
         // Property
-        building: tenancy.propertyDetails.building,
-        room: tenancy.propertyDetails.room,
+        rentalAddress: tenancy.propertyDetails.rentalAddress,
+        rentalCity: tenancy.propertyDetails.rentalCity,
+        rentalPostalCode: tenancy.propertyDetails.rentalPostalCode,
       }
     );
 
@@ -245,7 +240,6 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
     // If the post of the files to DB is succeed, we execute the function below and change step
     if (result) {
       try {
-        // setSent(true);
         await executeResult();
         setStep((prevStep) => prevStep + 1);
       } catch (err) {
@@ -258,76 +252,6 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
     <>
       <form onSubmit={handleSubmit} encType="multipart/form-data">
         <div className={styles.FormIntern}>
-          <div className={styles.GroupInput}>
-            <div className={styles.FormLeft}>
-              <Input
-                type="number"
-                name="monthlyNetIncome"
-                value={tenancy.tenantPersonalDetails.monthlyNetIncome}
-                label={t("F1SC.stepThree.monthlyNetIncome")}
-                placeholder={t("F1SC.stepThree.monthlyNetIncomePL")}
-                onChange={(e) => handleTenant(e)}
-                error={errors.monthlyNetIncome}
-              />
-            </div>
-            <div className={styles.FormLeft}>
-              <div className={selectStyles.selectContainer}>
-                <label className={selectStyles.selectLabel} htmlFor="jobType">
-                  {t("F1SC.stepThree.jobType")}
-                </label>
-                <select
-                  required
-                  name="jobType"
-                  className={selectStyles.selectInput}
-                  value={tenancy.tenantPersonalDetails.jobType}
-                  onChange={(e) => handleTenant(e)}
-                  error={errors.jobType}
-                >
-                  <option value="">{t("F1SC.stepThree.jobTypePL")}</option>
-
-                  <option name="jobType" value={t("F1SC.stepThree.jobTypeOne")}>
-                    {t("F1SC.stepThree.jobTypeOne")}
-                  </option>
-
-                  <option name="jobType" value={t("F1SC.stepThree.jobTypeTwo")}>
-                    {t("F1SC.stepThree.jobTypeTwo")}
-                  </option>
-
-                  <option
-                    name="jobType"
-                    value={t("F1SC.stepThree.jobTypeThree")}
-                  >
-                    {t("F1SC.stepThree.jobTypeThree")}
-                  </option>
-
-                  <option
-                    name="jobType"
-                    value={t("F1SC.stepThree.jobTypeFour")}
-                  >
-                    {t("F1SC.stepThree.jobTypeFour")}
-                  </option>
-
-                  <option
-                    name="jobType"
-                    value={t("F1SC.stepThree.jobTypeFive")}
-                  >
-                    {t("F1SC.stepThree.jobTypeFive")}
-                  </option>
-
-                  <option name="jobType" value={t("F1SC.stepThree.jobTypeSix")}>
-                    {t("F1SC.stepThree.jobTypeSix")}
-                  </option>
-
-                  <option
-                    name="jobType"
-                    value={t("F1SC.stepThree.jobTypeSeven")}
-                  >
-                    {t("F1SC.stepThree.jobTypeSeven")}
-                  </option>
-                </select>
-              </div>
-            </div>
-          </div>
           <div className={styles.GroupInput}>
             <div className={styles.FormLeft}>
               {/* Google maps Autocomplete */}
@@ -391,6 +315,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
               />
             </div>
           </div>
+
           <div className={styles.GroupInput}>
             <div className={styles.FormLeft}>
               <div className={selectStyles.selectContainer}>

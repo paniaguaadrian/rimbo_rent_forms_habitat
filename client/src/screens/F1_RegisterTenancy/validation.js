@@ -1,20 +1,8 @@
 export const isProperty = (values) => {
   let errors = {};
 
-  if (!values.building) {
-    errors.building = "Enter a building for the tenant.";
-  }
-
-  if (!values.room) {
-    errors.room = "Enter a room for the tenant.";
-  }
-
   if (!values.rentAmount) {
     errors.rentAmount = "Monthly Rent is required.";
-  }
-
-  if (!values.acceptanceCriteria) {
-    errors.acceptanceCriteria = "Writte a criteria for the tenant.";
   }
 
   if (!values.rentStartDate) {
@@ -49,14 +37,6 @@ export const isTenant = (values) => {
 
 export const isMoreTenant = (values) => {
   let errors = {};
-
-  if (!values.monthlyNetIncome) {
-    errors.monthlyNetIncome = "Monthly net income is required";
-  }
-
-  if (!values.jobType) {
-    errors.jobType = "Job type is required";
-  }
 
   if (!values.documentType) {
     errors.documentType = "Document Type is required";

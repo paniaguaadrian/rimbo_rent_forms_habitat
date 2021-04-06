@@ -8,10 +8,12 @@ import hbs from "nodemailer-express-handlebars";
 const testEmail = "paniaguasanchezadrian@gmail.com";
 
 // ? =======>  SPANISH VERSION START ==============================>
-// ! F1SC Form => E1R (email to Rimbo) E1SC (email to Starcity)
-const sendF1SCFormEmails = async (req, res) => {
+// ! F1SC Form => E1R (email to Rimbo) E1HA (email to Habitat)
+const sendF1HAFormEmails = async (req, res) => {
   const {
+    // Agency
     agencyName,
+    // Tenant
     tenantsName,
     tenantsEmail,
     tenantsPhone,
@@ -19,18 +21,19 @@ const sendF1SCFormEmails = async (req, res) => {
     tenantsZipCode,
     documentType,
     documentNumber,
-    monthlyNetIncome,
-    jobType,
     documentImageFront,
     documentImageBack,
     randomID,
+    // Tenancy
+    product,
     rentAmount,
-    acceptanceCriteria,
     rentStartDate,
     rentEndDate,
     tenancyID,
-    building,
-    room,
+    // Property
+    rentalAddress,
+    rentalCity,
+    rentalPostalCode,
   } = req.body;
 
   const transporterE1R = nodemailer.createTransport(
@@ -62,7 +65,7 @@ const sendF1SCFormEmails = async (req, res) => {
     viewEngine: {
       extname: ".handlebars",
       layoutsDir: "views/",
-      defaultLayout: "E1SCEmail",
+      defaultLayout: "E1HAEmail",
     },
     viewPath: "views/",
   };
@@ -77,14 +80,16 @@ const sendF1SCFormEmails = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "starcity-logo.png",
-        path: "./views/images/starcity-logo.png",
-        cid: "starcitylogo",
+        filename: "habitat-logo.png",
+        path: "./views/images/habitat-logo.png",
+        cid: "habitatlogo",
       },
     ],
     template: "E1REmail",
     context: {
+      // Agency
       agencyName,
+      // Tenant
       tenantsName,
       tenantsEmail,
       tenantsPhone,
@@ -92,36 +97,39 @@ const sendF1SCFormEmails = async (req, res) => {
       tenantsZipCode,
       documentType,
       documentNumber,
-      monthlyNetIncome,
-      jobType,
       documentImageFront,
       documentImageBack,
       randomID,
+      // Tenancy
+      product,
       rentAmount,
-      acceptanceCriteria,
       rentStartDate,
       rentEndDate,
       tenancyID,
-      building,
-      room,
+      // Property
+      rentalAddress,
+      rentalCity,
+      rentalPostalCode,
     },
   };
 
-  const StarcityEmail = {
+  const HabitatEmail = {
     from: "Rimbo info@rimbo.rent",
-    to: testEmail, // Starcity Email
+    to: testEmail, // Habitat Email
     subject: "Registro de inquilino correcto",
     text: "",
     attachments: [
       {
-        filename: "starcity-logo.png",
-        path: "./views/images/starcity-logo.png",
-        cid: "starcitylogo",
+        filename: "habitat-logo.png",
+        path: "./views/images/habitat-logo.png",
+        cid: "habitatlogo",
       },
     ],
-    template: "E1SCEmail",
+    template: "E1HAEmail",
     context: {
+      // Agency
       agencyName,
+      // Tenant
       tenantsName,
       tenantsEmail,
       tenantsPhone,
@@ -129,18 +137,19 @@ const sendF1SCFormEmails = async (req, res) => {
       tenantsZipCode,
       documentType,
       documentNumber,
-      monthlyNetIncome,
-      jobType,
       documentImageFront,
       documentImageBack,
       randomID,
+      // Tenancy
+      product,
       rentAmount,
-      acceptanceCriteria,
       rentStartDate,
       rentEndDate,
       tenancyID,
-      building,
-      room,
+      // Property
+      rentalAddress,
+      rentalCity,
+      rentalPostalCode,
     },
   };
 
@@ -152,7 +161,7 @@ const sendF1SCFormEmails = async (req, res) => {
     }
   });
 
-  transporterE1SC.sendMail(StarcityEmail, (err, data) => {
+  transporterE1SC.sendMail(HabitatEmail, (err, data) => {
     if (err) {
       console.log("There is an error here...!" + err);
     } else {
@@ -203,9 +212,9 @@ const sendE1REmailEmails = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "starcity-logo.png",
-        path: "./views/images/starcity-logo.png",
-        cid: "starcitylogo",
+        filename: "habitat-logo.png",
+        path: "./views/images/habitat-logo.png",
+        cid: "habitatlogo",
       },
     ],
     template: "E2TTEmail",
@@ -269,9 +278,9 @@ const sendNotificationRimbo = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "starcity-logo.png",
-        path: "./views/images/starcity-logo.png",
-        cid: "starcitylogo",
+        filename: "habitat-logo.png",
+        path: "./views/images/habitat-logo.png",
+        cid: "habitatlogo",
       },
     ],
     template: "E2REmail",
@@ -364,9 +373,9 @@ const sendF2SCFormEmails = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "starcity-logo.png",
-        path: "./views/images/starcity-logo.png",
-        cid: "starcitylogo",
+        filename: "habitat-logo.png",
+        path: "./views/images/habitat-logo.png",
+        cid: "habitatlogo",
       },
     ],
     template: "E3REmail",
@@ -387,9 +396,9 @@ const sendF2SCFormEmails = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "starcity-logo.png",
-        path: "./views/images/starcity-logo.png",
-        cid: "starcitylogo",
+        filename: "habitat-logo.png",
+        path: "./views/images/habitat-logo.png",
+        cid: "habitatlogo",
       },
       {
         filename: "Tenant_Guía_&_Reglas_generales_Starcity_ES.pdf",
@@ -414,9 +423,9 @@ const sendF2SCFormEmails = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "starcity-logo.png",
-        path: "./views/images/starcity-logo.png",
-        cid: "starcitylogo",
+        filename: "habitat-logo.png",
+        path: "./views/images/habitat-logo.png",
+        cid: "habitatlogo",
       },
     ],
     template: "E3SCEmail",
@@ -460,9 +469,11 @@ const sendF2SCFormEmails = async (req, res) => {
 ////////////////////////////////////////////////////////////////
 // ? =======>  ENGLISH VERSION START ==============================>
 // ! F1SC Form => E1R
-const sendF1SCFormEmailsEn = async (req, res) => {
+const sendHAFormEmailsEn = async (req, res) => {
   const {
+    // Agency
     agencyName,
+    // Tenant
     tenantsName,
     tenantsEmail,
     tenantsPhone,
@@ -470,18 +481,19 @@ const sendF1SCFormEmailsEn = async (req, res) => {
     tenantsZipCode,
     documentType,
     documentNumber,
-    monthlyNetIncome,
-    jobType,
     documentImageFront,
     documentImageBack,
     randomID,
+    // Tenancy
+    product,
     rentAmount,
-    acceptanceCriteria,
     rentStartDate,
     rentEndDate,
     tenancyID,
-    building,
-    room,
+    // Property
+    rentalAddress,
+    rentalCity,
+    rentalPostalCode,
   } = req.body;
 
   const transporterE1R = nodemailer.createTransport(
@@ -513,7 +525,7 @@ const sendF1SCFormEmailsEn = async (req, res) => {
     viewEngine: {
       extname: ".handlebars",
       layoutsDir: "views/",
-      defaultLayout: "E1SCEmailEn",
+      defaultLayout: "E1HAEmailEn",
     },
     viewPath: "views/",
   };
@@ -528,14 +540,16 @@ const sendF1SCFormEmailsEn = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "starcity-logo.png",
-        path: "./views/images/starcity-logo.png",
-        cid: "starcitylogo",
+        filename: "habitat-logo.png",
+        path: "./views/images/habitat-logo.png",
+        cid: "habitatlogo",
       },
     ],
     template: "E1REmailEn",
     context: {
+      // Agency
       agencyName,
+      // Tenant
       tenantsName,
       tenantsEmail,
       tenantsPhone,
@@ -543,18 +557,19 @@ const sendF1SCFormEmailsEn = async (req, res) => {
       tenantsZipCode,
       documentType,
       documentNumber,
-      monthlyNetIncome,
-      jobType,
       documentImageFront,
       documentImageBack,
       randomID,
+      // Tenancy
+      product,
       rentAmount,
-      acceptanceCriteria,
       rentStartDate,
       rentEndDate,
       tenancyID,
-      building,
-      room,
+      // Property
+      rentalAddress,
+      rentalCity,
+      rentalPostalCode,
     },
   };
 
@@ -565,14 +580,16 @@ const sendF1SCFormEmailsEn = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "starcity-logo.png",
-        path: "./views/images/starcity-logo.png",
-        cid: "starcitylogo",
+        filename: "habitat-logo.png",
+        path: "./views/images/habitat-logo.png",
+        cid: "habitatlogo",
       },
     ],
-    template: "E1SCEmailEn",
+    template: "E1HAEmailEn",
     context: {
+      // Agency
       agencyName,
+      // Tenant
       tenantsName,
       tenantsEmail,
       tenantsPhone,
@@ -580,18 +597,19 @@ const sendF1SCFormEmailsEn = async (req, res) => {
       tenantsZipCode,
       documentType,
       documentNumber,
-      monthlyNetIncome,
-      jobType,
       documentImageFront,
       documentImageBack,
       randomID,
+      // Tenancy
+      product,
       rentAmount,
-      acceptanceCriteria,
       rentStartDate,
       rentEndDate,
       tenancyID,
-      building,
-      room,
+      // Property
+      rentalAddress,
+      rentalCity,
+      rentalPostalCode,
     },
   };
 
@@ -654,9 +672,9 @@ const sendE1REmailEmailsEn = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "starcity-logo.png",
-        path: "./views/images/starcity-logo.png",
-        cid: "starcitylogo",
+        filename: "habitat-logo.png",
+        path: "./views/images/habitat-logo.png",
+        cid: "habitatlogo",
       },
     ],
     template: "E2TTEmailEn",
@@ -720,9 +738,9 @@ const sendNotificationRimboEn = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "starcity-logo.png",
-        path: "./views/images/starcity-logo.png",
-        cid: "starcitylogo",
+        filename: "habitat-logo.png",
+        path: "./views/images/habitat-logo.png",
+        cid: "habitatlogo",
       },
     ],
     template: "E2REmailEn",
@@ -815,9 +833,9 @@ const sendF2SCFormEmailsEn = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "starcity-logo.png",
-        path: "./views/images/starcity-logo.png",
-        cid: "starcitylogo",
+        filename: "habitat-logo.png",
+        path: "./views/images/habitat-logo.png",
+        cid: "habitatlogo",
       },
     ],
     template: "E3REmailEn",
@@ -838,9 +856,9 @@ const sendF2SCFormEmailsEn = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "starcity-logo.png",
-        path: "./views/images/starcity-logo.png",
-        cid: "starcitylogo",
+        filename: "habitat-logo.png",
+        path: "./views/images/habitat-logo.png",
+        cid: "habitatlogo",
       },
       {
         filename: "Tenant_General_Rules_&_Guidelines_Starcity_EN.pdf",
@@ -866,9 +884,9 @@ const sendF2SCFormEmailsEn = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "starcity-logo.png",
-        path: "./views/images/starcity-logo.png",
-        cid: "starcitylogo",
+        filename: "habitat-logo.png",
+        path: "./views/images/habitat-logo.png",
+        cid: "habitatlogo",
       },
     ],
     template: "E3SCEmailEn",
@@ -911,11 +929,11 @@ const sendF2SCFormEmailsEn = async (req, res) => {
 // ? =======> ENGLISH VERSION END ==============================>
 
 export {
-  sendF1SCFormEmails,
+  sendF1HAFormEmails,
   sendE1REmailEmails,
   sendNotificationRimbo,
   sendF2SCFormEmails,
-  sendF1SCFormEmailsEn,
+  sendHAFormEmailsEn,
   sendE1REmailEmailsEn,
   sendNotificationRimboEn,
   sendF2SCFormEmailsEn,

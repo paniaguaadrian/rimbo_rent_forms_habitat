@@ -2,7 +2,7 @@ import express from "express";
 
 // Controllers imported
 import {
-  sendF1SCFormEmailsEn,
+  sendHAFormEmailsEn,
   sendE1REmailEmailsEn,
   sendF2SCFormEmailsEn,
   sendNotificationRimboEn,
@@ -10,7 +10,7 @@ import {
 
 const router = express.Router();
 
-router.route("/e1r").post(sendF1SCFormEmailsEn);
+router.route("/e1r").post(sendHAFormEmailsEn);
 router.route("/e2tt").post(sendE1REmailEmailsEn);
 router.route("/e2r").post(sendNotificationRimboEn);
 router.route("/e3").post(sendF2SCFormEmailsEn);
