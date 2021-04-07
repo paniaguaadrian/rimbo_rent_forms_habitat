@@ -53,13 +53,27 @@
   }
   p {
     @include xl {
+      margin: 0 auto;
       font-size: 1rem;
       margin-bottom: 2rem;
       font-weight: 400;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     font-size: 1.2rem;
     margin-bottom: 4rem;
     font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      margin-right: 1rem;
+    }
+    a {
+      color: $primary-color;
+      text-decoration: underline;
+    }
   }
   img {
     width: 25rem;
