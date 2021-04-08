@@ -11,6 +11,7 @@ export const DefaultTenancy = {
 
   propertyDetails: {
     rentalAddress: "",
+    rentalAddressSecond: "",
     rentalCity: "",
     rentalPostalCode: "",
     rentAmount: "",

@@ -36,6 +36,7 @@ const sendF1HAFormEmails = async (req, res) => {
     tenancyID,
     // Property
     rentalAddress,
+    rentalAddressSecond,
     rentalCity,
     rentalPostalCode,
   } = req.body;
@@ -112,6 +113,7 @@ const sendF1HAFormEmails = async (req, res) => {
       tenancyID,
       // Property
       rentalAddress,
+      rentalAddressSecond,
       rentalCity,
       rentalPostalCode,
     },
@@ -152,6 +154,7 @@ const sendF1HAFormEmails = async (req, res) => {
       tenancyID,
       // Property
       rentalAddress,
+      rentalAddressSecond,
       rentalCity,
       rentalPostalCode,
     },
@@ -200,6 +203,7 @@ const sendE1REmailEmails = async (req, res) => {
     tenancyID,
     // Property
     rentalAddress,
+    rentalAddressSecond,
     rentalCity,
     rentalPostalCode,
   } = req.body;
@@ -258,6 +262,7 @@ const sendE1REmailEmails = async (req, res) => {
       tenancyID,
       // Property
       rentalAddress,
+      rentalAddressSecond,
       rentalCity,
       rentalPostalCode,
     },
@@ -360,6 +365,7 @@ const sendF2SCFormEmails = async (req, res) => {
     tenancyID,
     // Property
     rentalAddress,
+    rentalAddressSecond,
     rentalCity,
     rentalPostalCode,
   } = req.body;
@@ -450,6 +456,7 @@ const sendF2SCFormEmails = async (req, res) => {
       tenancyID,
       // Property
       rentalAddress,
+      rentalAddressSecond,
       rentalCity,
       rentalPostalCode,
     },
@@ -494,6 +501,7 @@ const sendF2SCFormEmails = async (req, res) => {
       tenancyID,
       // Property
       rentalAddress,
+      rentalAddressSecond,
       rentalCity,
       rentalPostalCode,
     },
@@ -534,6 +542,7 @@ const sendF2SCFormEmails = async (req, res) => {
       tenancyID,
       // Property
       rentalAddress,
+      rentalAddressSecond,
       rentalCity,
       rentalPostalCode,
     },
@@ -592,6 +601,7 @@ const sendHAFormEmailsEn = async (req, res) => {
     tenancyID,
     // Property
     rentalAddress,
+    rentalAddressSecond,
     rentalCity,
     rentalPostalCode,
   } = req.body;
@@ -668,6 +678,7 @@ const sendHAFormEmailsEn = async (req, res) => {
       tenancyID,
       // Property
       rentalAddress,
+      rentalAddressSecond,
       rentalCity,
       rentalPostalCode,
     },
@@ -708,6 +719,7 @@ const sendHAFormEmailsEn = async (req, res) => {
       tenancyID,
       // Property
       rentalAddress,
+      rentalAddressSecond,
       rentalCity,
       rentalPostalCode,
     },
@@ -756,6 +768,7 @@ const sendE1REmailEmailsEn = async (req, res) => {
     tenancyID,
     // Property
     rentalAddress,
+    rentalAddressSecond,
     rentalCity,
     rentalPostalCode,
   } = req.body;
@@ -814,6 +827,7 @@ const sendE1REmailEmailsEn = async (req, res) => {
       tenancyID,
       // Property
       rentalAddress,
+      rentalAddressSecond,
       rentalCity,
       rentalPostalCode,
     },
@@ -916,6 +930,7 @@ const sendF2SCFormEmailsEn = async (req, res) => {
     tenancyID,
     // Property
     rentalAddress,
+    rentalAddressSecond,
     rentalCity,
     rentalPostalCode,
   } = req.body;
@@ -1006,6 +1021,7 @@ const sendF2SCFormEmailsEn = async (req, res) => {
       tenancyID,
       // Property
       rentalAddress,
+      rentalAddressSecond,
       rentalCity,
       rentalPostalCode,
     },
@@ -1051,6 +1067,7 @@ const sendF2SCFormEmailsEn = async (req, res) => {
       tenancyID,
       // Property
       rentalAddress,
+      rentalAddressSecond,
       rentalCity,
       rentalPostalCode,
     },
@@ -1091,6 +1108,7 @@ const sendF2SCFormEmailsEn = async (req, res) => {
       tenancyID,
       // Property
       rentalAddress,
+      rentalAddressSecond,
       rentalCity,
       rentalPostalCode,
     },

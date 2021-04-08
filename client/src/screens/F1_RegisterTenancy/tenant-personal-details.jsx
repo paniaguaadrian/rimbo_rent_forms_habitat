@@ -128,6 +128,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
         tenancyID: data.tenancyID,
         // Property
         rentalAddress: data.property.rentalAddress,
+        rentalAddressSecond: data.property.rentalAddressSecond,
         rentalCity: data.property.rentalCity,
         rentalPostalCode: data.property.rentalPostalCode,
       });
@@ -154,6 +155,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
         tenancyID: data.tenancyID,
         // Property
         rentalAddress: data.property.rentalAddress,
+        rentalAddressSecond: data.property.rentalAddressSecond,
         rentalCity: data.property.rentalCity,
         rentalPostalCode: data.property.rentalPostalCode,
       });
@@ -211,6 +213,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
         tenancyID: randomID,
         // Property
         rentalAddress: tenancy.propertyDetails.rentalAddress,
+        rentalAddressSecond: tenancy.propertyDetails.rentalAddressSecond,
         rentalCity: tenancy.propertyDetails.rentalCity,
         rentalPostalCode: tenancy.propertyDetails.rentalPostalCode,
       }

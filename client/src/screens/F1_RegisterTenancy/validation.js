@@ -1,6 +1,10 @@
 export const isProperty = (values) => {
   let errors = {};
 
+  if (!values.rentalAddressSecond) {
+    errors.rentalAddressSecond = "Details of the property is required.";
+  }
+
   if (!values.rentAmount) {
     errors.rentAmount = "Monthly Rent is required.";
   }

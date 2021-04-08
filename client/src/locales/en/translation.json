@@ -7,7 +7,7 @@
     "header": "Habitat & Rimbo - The new way of renting",
     "title": "Welcome to the union between Habitat and Rimbo",
     "subtitle": "Enjoy the new way of renting",
-    "text": "Any question please communicate with us"
+    "text": "In case you have any questions, please get in touch with us"
   },
   "F1SC": {
     "helmet": "New tenancy - Habitat & Rimbo - The new way of rent",
@@ -20,6 +20,8 @@
     "stepZero": {
       "renalAddress": "Rental Address",
       "renalAddressPL": "Write the rental address",
+      "rentalAddressSecond": "Floor / Door",
+      "rentalAddressSecondPL": "Write the details of the property",
       "rentalCity": "Rental City",
       "rentalCityPL": "Barcelona, Madrid ...",
       "rentalPostalCode": "Rental Postal Code",

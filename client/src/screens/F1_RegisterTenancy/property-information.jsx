@@ -146,6 +146,19 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
           <div className={styles.FormLeft}>
             <Input
               type="text"
+              name="rentalAddressSecond"
+              value={tenancy.propertyDetails.rentalAddressSecond}
+              label={t("F1SC.stepZero.rentalAddressSecond")}
+              placeholder={t("F1SC.stepZero.rentalAddressSecondPL")}
+              onChange={(e) => handleProperty(e)}
+              error={errors.rentalAddressSecond}
+            />
+          </div>
+        </div>
+        <div className={styles.GroupInput}>
+          <div className={styles.FormLeft}>
+            <Input
+              type="text"
               name="rentalCity"
               value={rentalCity}
               label={t("F1SC.stepZero.rentalCity")}
@@ -155,8 +168,6 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
               disabled
             />
           </div>
-        </div>
-        <div className={styles.GroupInputAlone}>
           <div className={styles.FormLeft}>
             <Input
               type="text"

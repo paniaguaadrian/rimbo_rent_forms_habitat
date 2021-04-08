@@ -20,6 +20,8 @@
     "stepZero": {
       "renalAddress": "Dirección del inmueble",
       "renalAddressPL": "Escribe la dirección del inmuble",
+      "rentalAddressSecond": "Piso / Puerta",
+      "rentalAddressSecondPL": "Escribe los detalles de la propiedad",
       "rentAmount": "Alquiler mensual (en €)",
       "rentalCity": "Ciudad el inmueble",
       "rentalCityPL": "Barcelona, Madrid ...",
@@ -107,7 +109,7 @@
     "titleOne": "¡Alquila este apartamento ",
     "titleTwo": "sin pagar fianza",
     "leftTextOne": "Estamos muy ilusionados de que hayas decidido formar parte de Habitat y somos conscientes de que para ti es muy importante mudarte de una manera fácil, ágil y asequible.",
-    "leftTextTwo": "De esta manera hemos decidido que en esta propiedad no será necesario un depósito para entrar a vivir.",
+    "leftTextTwo": "Por esto en Habitat nuestras comunidades no necesitan fianza en efectivo.",
     "leftTextThree": "Con nosotros no tienes que adelantar la fianza. Solo tienes que registrar tu tarjeta de débito.",
     "name": "Nombre Completo: ",
     "email": "Email: ",
