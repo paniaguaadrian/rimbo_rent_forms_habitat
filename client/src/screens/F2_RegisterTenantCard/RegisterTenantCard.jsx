@@ -274,8 +274,6 @@ const RegisterTenantCard = ({ t }) => {
                 <div className={style.HeaderContainer}>
                   <h1>
                     <span>{t("F2TT.titleOne")}</span>
-                    {t("F2TT.titleTwo")}
-                    <span>!</span>
                   </h1>
                 </div>
                 <div className={style.ContainerCard}>
@@ -430,6 +428,7 @@ const RegisterTenantCard = ({ t }) => {
               <div className={style.form_header_left_success}>
                 <p>{t("cardsuccess.textOne")}</p>
                 <p>{t("cardsuccess.textTwo")}</p>
+                <p>{t("cardsuccess.textThree")}</p>
               </div>
               <div className={style.success_container_right}>
                 <img src={HabitatImage} alt={t("cardsuccess.imageAltAgency")} />

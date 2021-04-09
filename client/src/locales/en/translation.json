@@ -116,11 +116,10 @@
   },
   "F2TT": {
     "header": "New tenant - Habitat & Rimbo - The new way of rent",
-    "titleOne": "Rent this property ",
-    "titleTwo": "deposit-free",
-    "leftTextOne": "We are excited about your upcoming move with Habitat and we want to make it as easy and cost-effective for you as possible!",
-    "leftTextTwo": "This is why this apartment is deposit-free.",
-    "leftTextThree": "No need to pay any deposit upfront. Just register with your debit card details.",
+    "titleOne": "Register your debit card",
+    "leftTextOne": "Thank you for choosing to work with Rimbo.",
+    "leftTextTwo": "By filling out this form you're registering your debit card details within a secure environment. All information that you're sharing is confidential and will be used solely as a guarantee and for the purposes of replacing the payment of a deposit.",
+    "leftTextThree": "No amounts will be charged or blocked upon registration.",
     "name": "Full name: ",
     "email": "Email: ",
     "phone": "Phone: ",
@@ -132,12 +131,13 @@
     "checkBoxTwo": "Terms and Conditions",
     "checkBoxThree": "Privacy Policy",
     "checkBoxFour": "Cookie Policy",
-    "checkBoxFive": "of Rimbo Rent"
+    "checkBoxFive": "of Rimbo Rent Solutions S.L"
   },
   "cardsuccess": {
-    "title": "You are already part of Habitat!",
-    "textOne": "Awesome, we have received your details!",
-    "textTwo": "We will get in touch with you shortly to complete the process.",
+    "title": "Thank you for choosing to work with Rimbo",
+    "textOne": "We have received your details.",
+    "textTwo": "Habitat Apartments will be in touch with you in the upcoming days to formalize the rent contract.",
+    "textThree": "We've sent you our 'Tenant's Guide' over e-mail to the address that you listed so you can read in detail how deposit-free renting works.",
     "imageAltAgency": "Habitat Apartments logo",
     "imageAltRimbo": "Rimbo Rent Logo"
   },

@@ -106,11 +106,10 @@
   },
   "F2TT": {
     "header": "Nuevo inquilino - Habitat & Rimbo - The new way of rent",
-    "titleOne": "¡Alquila este apartamento ",
-    "titleTwo": "sin pagar fianza",
-    "leftTextOne": "Estamos muy ilusionados de que hayas decidido formar parte de Habitat y somos conscientes de que para ti es muy importante mudarte de una manera fácil, ágil y asequible.",
-    "leftTextTwo": "Por esto en Habitat nuestras comunidades no necesitan fianza en efectivo.",
-    "leftTextThree": "Con nosotros no tienes que adelantar la fianza. Solo tienes que registrar tu tarjeta de débito.",
+    "titleOne": "Registra tu tarjeta de débito ",
+    "leftTextOne": "Muchas  gracias por confiar en Rimbo.",
+    "leftTextTwo": "Mediante este formulario registras los datos de tu tarjeta de débito en un entorno seguro. Esta información es cofidencial y se utilizará unicamente como garantia, de este modo no es necesario el pago de la fianza. ",
+    "leftTextThree": "No se realizará ningún cargo en este momento, ni se bloqueará ningún importe en la tarjeta.",
     "name": "Nombre Completo: ",
     "email": "Email: ",
     "phone": "Teléfono: ",
@@ -122,12 +121,13 @@
     "checkBoxTwo": "Términos y condiciones",
     "checkBoxThree": "Política de Privacidad",
     "checkBoxFour": "Política de Cookies",
-    "checkBoxFive": "de Rimbo Rent"
+    "checkBoxFive": "de Rimbo Rent Solutions S.L"
   },
   "cardsuccess": {
-    "title": "¡Ya eres parte de Habitat!",
-    "textOne": "Genial, ¡hemos recibido tus detalles!",
-    "textTwo": " Nos pondremos en contacto contigo en breve para completar el proceso.",
+    "title": "Muchas gracias por confiar en Rimbo",
+    "textOne": "Hemos recibido tus datos correctamente.",
+    "textTwo": "Habitat Apartments se pondrá en contacto contigo en los próximos días para formalizar el contrato de alquiler.",
+    "textThree": "Hemos enviado un e-mail a la dirección que nos has facilitado con la 'Guía del Inquilino' donde explicamos con detalle cómo funciona el servicio de alquiler sin fianza.",
     "imageAltAgency": "Habitat Apartments logo",
     "imageAltRimbo": "Rimbo Rent Logo"
   },
