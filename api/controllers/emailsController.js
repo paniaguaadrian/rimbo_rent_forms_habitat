@@ -4,10 +4,10 @@ import hbs from "nodemailer-express-handlebars";
 
 // * Rimbo rent emails
 // Production / Development
-// const rimboEmail = "info@rimbo.rent";
+const rimboEmail = "info@rimbo.rent";
+const habitatEmail = "info@habitatapartments.com";
+// const rimboEmail = "victor@rimbo.rent";
 // const habitatEmail = "victor@rimbo.rent";
-const rimboEmail = "victor@rimbo.rent";
-const habitatEmail = "victor@rimbo.rent";
 // const rimboEmail = "paniaguasanchezadrian@gmail.com";
 // const habitatEmail = "paniaguasanchezadrian@gmail.com";
 
@@ -646,7 +646,7 @@ const sendHAFormEmailsEn = async (req, res) => {
   const RimboEmail = {
     from: "Rimbo info@rimbo.rent",
     to: rimboEmail, // Rimbo Email
-    subject: "Registro de inquilino correcto",
+    subject: "New tenancy from Habitat",
     text: "",
     attachments: [
       {
@@ -687,7 +687,7 @@ const sendHAFormEmailsEn = async (req, res) => {
   const HabitatEmail = {
     from: "Rimbo info@rimbo.rent",
     to: habitatEmail, // Habitat Email
-    subject: "Registro de inquilino correcto",
+    subject: "New tenancy from Habitat - Rimbo",
     text: "",
     attachments: [
       {
@@ -795,7 +795,7 @@ const sendE1REmailEmailsEn = async (req, res) => {
   const TenantEmail = {
     from: "Rimbo info@rimbo.rent",
     to: tenantsEmail, // Rimbo Email
-    subject: "Registro de inquilino correcto",
+    subject: "New tenancy with Habitat - Rimbo",
     text: "",
     attachments: [
       {
@@ -989,7 +989,7 @@ const sendF2SCFormEmailsEn = async (req, res) => {
   const RimboEmail = {
     from: "Rimbo info@rimbo.rent",
     to: rimboEmail, // Rimbo Email
-    subject: "Registro de inquilino correcto",
+    subject: "New tenancy with Habitat - Rimbo",
     text: "",
     attachments: [
       {
@@ -1030,7 +1030,7 @@ const sendF2SCFormEmailsEn = async (req, res) => {
   const TenantEmail = {
     from: "Rimbo info@rimbo.rent",
     to: tenantsEmail, // Tenant Email
-    subject: "Registro de inquilino correcto",
+    subject: "New tenancy with Habitat - Rimbo",
     text: "",
     attachments: [
       {
@@ -1076,7 +1076,7 @@ const sendF2SCFormEmailsEn = async (req, res) => {
   const HAEmail = {
     from: "Rimbo info@rimbo.rent",
     to: habitatEmail, // Habitat Email
-    subject: "Registro de inquilino correcto",
+    subject: "New tenancy with Habitat - Rimbo",
     text: "",
     attachments: [
       {
