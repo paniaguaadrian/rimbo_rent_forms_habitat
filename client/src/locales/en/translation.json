@@ -117,7 +117,7 @@
   "F2TT": {
     "header": "New tenant - Habitat & Rimbo - The new way of rent",
     "titleOne": "Register your debit card",
-    "leftTextOne": "Thank you for choosing to work with Rimbo.",
+    "leftTextOne": "Thank you for choosing Rimbo.",
     "leftTextTwo": "By filling out this form you're registering your debit card details within a secure environment. All information that you're sharing is confidential and will be used solely as a guarantee and for the purposes of replacing the payment of a deposit.",
     "leftTextThree": "No amounts will be charged or blocked upon registration.",
     "name": "Full name: ",
@@ -134,10 +134,10 @@
     "checkBoxFive": "of Rimbo Rent Solutions S.L"
   },
   "cardsuccess": {
-    "title": "Thank you for choosing to work with Rimbo",
-    "textOne": "We have received your details.",
-    "textTwo": "Habitat Apartments will be in touch with you in the upcoming days to formalize the rent contract.",
-    "textThree": "We've sent you our 'Tenant's Guide' over e-mail to the address that you listed so you can read in detail how deposit-free renting works.",
+    "title": "Thank you for choosing Rimbo",
+    "textOne": "We have successfully received your details.",
+    "textTwo": "Habitat Apartments will be in touch with you in the upcoming days to formalize the rental contract.",
+    "textThree": "We've sent you our 'Tenant's Guide' by email to the address that you listed so you can read in detail how deposit-free renting works.",
     "imageAltAgency": "Habitat Apartments logo",
     "imageAltRimbo": "Rimbo Rent Logo"
   },

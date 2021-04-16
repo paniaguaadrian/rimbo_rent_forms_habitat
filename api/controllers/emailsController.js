@@ -81,7 +81,7 @@ const sendF1HAFormEmails = async (req, res) => {
   const RimboEmail = {
     from: "Rimbo info@rimbo.rent",
     to: rimboEmail, // Rimbo Email
-    subject: "Registro de inquilino correcto",
+    subject: `Nuevo inquilino registrado por ${agencyName}`,
     text: "",
     attachments: [
       {
@@ -230,7 +230,7 @@ const sendE1REmailEmails = async (req, res) => {
   const TenantEmail = {
     from: "Rimbo info@rimbo.rent",
     to: tenantsEmail, // tenant Email
-    subject: "Registro de inquilino correcto",
+    subject: "Servicio de alquiler sin fianza - Deposit-free renting service",
     text: "",
     attachments: [
       {
@@ -424,7 +424,7 @@ const sendF2SCFormEmails = async (req, res) => {
   const RimboEmail = {
     from: "Rimbo info@rimbo.rent",
     to: rimboEmail, // Rimbo Email
-    subject: "Registro de inquilino correcto",
+    subject: `${tenantsName} Tarjeta registrada correctamente`,
     text: "",
     attachments: [
       {
@@ -465,7 +465,7 @@ const sendF2SCFormEmails = async (req, res) => {
   const TenantEmail = {
     from: "Rimbo info@rimbo.rent",
     to: tenantsEmail, // Tenant Email
-    subject: "Registro de inquilino correcto",
+    subject: "Registro completado correctamente",
     text: "",
     attachments: [
       {
@@ -510,7 +510,7 @@ const sendF2SCFormEmails = async (req, res) => {
   const HabitatEmail = {
     from: "Rimbo info@rimbo.rent",
     to: habitatEmail, // Habitat Email
-    subject: "Registro de inquilino correcto",
+    subject: `${tenantsName} Tarjeta registrada correctamente`,
     text: "",
     attachments: [
       {
@@ -646,7 +646,7 @@ const sendHAFormEmailsEn = async (req, res) => {
   const RimboEmail = {
     from: "Rimbo info@rimbo.rent",
     to: rimboEmail, // Rimbo Email
-    subject: "New tenancy from Habitat",
+    subject: `New Tenant Listing by ${agencyName}`,
     text: "",
     attachments: [
       {
@@ -687,7 +687,7 @@ const sendHAFormEmailsEn = async (req, res) => {
   const HabitatEmail = {
     from: "Rimbo info@rimbo.rent",
     to: habitatEmail, // Habitat Email
-    subject: "New tenancy from Habitat - Rimbo",
+    subject: "Registro de inquilino correcto",
     text: "",
     attachments: [
       {
@@ -989,7 +989,7 @@ const sendF2SCFormEmailsEn = async (req, res) => {
   const RimboEmail = {
     from: "Rimbo info@rimbo.rent",
     to: rimboEmail, // Rimbo Email
-    subject: "New tenancy with Habitat - Rimbo",
+    subject: `${tenantsName} Card successfully registered`,
     text: "",
     attachments: [
       {
@@ -1030,7 +1030,7 @@ const sendF2SCFormEmailsEn = async (req, res) => {
   const TenantEmail = {
     from: "Rimbo info@rimbo.rent",
     to: tenantsEmail, // Tenant Email
-    subject: "New tenancy with Habitat - Rimbo",
+    subject: "Registration successfully completed",
     text: "",
     attachments: [
       {
@@ -1076,7 +1076,7 @@ const sendF2SCFormEmailsEn = async (req, res) => {
   const HAEmail = {
     from: "Rimbo info@rimbo.rent",
     to: habitatEmail, // Habitat Email
-    subject: "New tenancy with Habitat - Rimbo",
+    subject: `${tenantsName} Card successfully registered`,
     text: "",
     attachments: [
       {

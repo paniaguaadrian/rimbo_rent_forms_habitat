@@ -393,7 +393,7 @@ a{
 		          <tr>
 		            <td class="bg_white email-section">
 		            	<div class="heading-section" style="text-align: center; padding: 0 30px;">
-		              	<h3>La agencia {{agencyName}} ha rellenado el formulario</h3>
+		              	<h3>The agency {{agencyName}} has fill the form</h3>
 
 		            	</div>
 		          </tr><!-- end: tr -->
@@ -402,28 +402,28 @@ a{
 					<tr>
 						<td>
 							<div class="text" style="padding: 0em 3em; text-align: left; color: black;">
-								<h3>Inquilino:</h3>
+								<h3>Tenant:</h3>
 								<ul>
-                                    <li>Nombre completo del inquilino: {{tenantsName}}</li>
-                                    <li>Correo electrónico del inquilino: {{tenantsEmail}}</li>
-									<li>Número de teléfono del inquilino: {{tenantsPhone}}</li>
-									<li>Dirección actual: {{tenantsAddress}}</li>
-									<li>Código Postal Actual: {{tenantsZipCode}}</li>
-									<li>Tipo de Documento: {{documentType}}</li>
-									<li>Número  de Documento: {{documentNumber}}</li>
-									<li>Documento identidad (Frontal): {{documentImageFront}}</li>
-									<li>Documento identidad (Atrás): {{documentImageBack}}</li>
+                                    <li>Tenant's full name: {{tenantsName}}</li>
+                                    <li>Tenant/s email: {{tenantsEmail}}</li>
+									<li>Tenant's phone number: {{tenantsPhone}}</li>
+									<li>Tenant's current address: {{tenantsAddress}}</li>
+									<li>Postal code: {{tenantsZipCode}}</li>
+									<li>Document Type: {{documentType}}</li>
+									<li>Document number: {{documentNumber}}</li>
+									<li>Document image (Front): {{documentImageFront}}</li>
+									<li>Document image (Back): {{documentImageBack}}</li>
                                 </ul>
-								<h3>Información del apartamento</h3>
+								<h3>Apartment:</h3>
 								<ul>
-									<li>Alquiler mensual: {{rentAmount}}€</li>
-                                    <li>Servicio: {{product}}</li>
-									<li>Direccion del inmueble: {{rentalAddress}}</li>
-									<li>Piso, puerta: {{rentalAddressSecond}}</li>
-									<li>Ciuda del inmueble: {{rentalCity}}</li>
-									<li>Codigo Postal del inmueble: {{rentalPostalCode}}</li>
-                                    <li>Fecha de entrada: {{rentStartDate}}</li>
-                                    <li>Fecha de salida: {{rentEndDate}}</li>
+									<li>Rent amount: {{rentAmount}}€</li>
+                                    <li>Product: {{product}}</li>
+									<li>Rental Address: {{rentalAddress}}</li>
+									<li>Floor, door: {{rentalAddressSecond}}</li>
+									<li>Rental City: {{rentalCity}}</li>
+									<li>Rental postal code: {{rentalPostalCode}}</li>
+                                    <li>Rent Start date: {{rentStartDate}}</li>
+                                    <li>Rent end date: {{rentEndDate}}</li>
 								</ul>
 								
 							</div>
@@ -431,7 +431,7 @@ a{
 					</tr>
 				</table>
 
-				<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+				{{!-- <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
 		          <tr>
 		            <td class="bg_white email-section">
 		            	<div class="heading-section" style="text-align: center;">
@@ -439,7 +439,7 @@ a{
 						  
 		          </tr><!-- end: tr -->
 					
-			</table>
+			</table> --}}
 
 			<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
 		          <tr>
@@ -450,14 +450,9 @@ a{
                         <button class='btn-rimbo' type="button"><a href="http://localhost:3000/register/tenancy/{{tenancyID}}/rejected">¡Rechazar!(DEV)</a></button> --}}
 
 
-						<button class='btn-rimbo' type="button"><a href="https://habitat.rimbo.rent/register/tenancy/{{tenancyID}}/approved">¡Aprobar!</a></button>
+						<button class='btn-rimbo' type="button"><a href="https://habitat.rimbo.rent/register/tenancy/{{tenancyID}}/approved">Approve!</a></button>
 
-                        <button class='btn-rimbo' type="button"><a href="https://habitat.rimbo.rent/register/tenancy/{{tenancyID}}/rejected">¡Rechazar!</a></button>
-
-
-						{{!-- <button class='btn-rimbo' type="button"><a href="https://badi.rimbo.rent/register/rj2/{{tenancyID}}/approved">¡Aprobar!(PROD2)</a></button>
-
-                        <button class='btn-rimbo' type="button"><a href="https://badi.rimbo.rent/register/rj2/{{tenancyID}}/rejected">¡Rechazar!(PROD2)</a></button> --}}
+                        <button class='btn-rimbo' type="button"><a href="https://habitat.rimbo.rent/register/tenancy/{{tenancyID}}/rejected">Reject!</a></button>
 						  
 		          </tr><!-- end: tr -->
 					
