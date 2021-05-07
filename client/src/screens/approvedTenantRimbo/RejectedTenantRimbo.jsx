@@ -5,7 +5,6 @@ const RejectedTenantRimbo = () => {
   return (
     <div>
       <h1>Tenant Rejected!</h1>
-      {/* <p>Say goodbye to ${tenantsName}</p> */}
     </div>
   );
 };

@@ -265,7 +265,7 @@ const RegisterTenantCard = ({ t }) => {
                 color="#01d2cc"
                 height={100}
                 width={100}
-                timeout={3000} //3 secs
+                timeout={6000} //6 secs
               />
             </div>
           ) : (
@@ -335,8 +335,6 @@ const RegisterTenantCard = ({ t }) => {
                         ) : (
                           <p>{t("F2TT.warningcreditcardTwo")}</p>
                         )}
-
-                        {/* <p>{t("F2TT.warningcreditcard")}</p> */}
                       </label>
 
                       <div className={style.ErrorInput}>
@@ -392,7 +390,7 @@ const RegisterTenantCard = ({ t }) => {
                             color="#01d2cc"
                             height={50}
                             width={50}
-                            timeout={3000} //3 secs
+                            timeout={6000} //6 secs
                           />
                         ) : (
                           <button disabled={isProcessing || !stripe}>

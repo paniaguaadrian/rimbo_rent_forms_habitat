@@ -207,7 +207,6 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
                 className={selectStyles.selectInput}
                 value={tenancy.propertyDetails.product}
                 onChange={(e) => handleProperty(e)}
-                // error={errors.documentType}
               >
                 <option value="">{t("F1SC.stepZero.productPL")}</option>
 

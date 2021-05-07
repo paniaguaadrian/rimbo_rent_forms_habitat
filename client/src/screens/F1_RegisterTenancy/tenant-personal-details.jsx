@@ -450,7 +450,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
               color="#01d2cc"
               height={50}
               width={50}
-              timeout={3000} //3 secs
+              timeout={6000} //6 secs
             />
           ) : (
             <Button disabled={isProcessing} type="submit">
