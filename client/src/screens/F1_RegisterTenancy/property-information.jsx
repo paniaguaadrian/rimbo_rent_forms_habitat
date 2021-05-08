@@ -15,7 +15,6 @@ import { UPDATE_PROPERTY_INFO } from "./constants";
 
 // Styles imported
 import styles from "./register-user.module.scss";
-import selectStyles from "../../components/InputSelect/input.select.module.scss";
 
 // Multilanguage
 import { withNamespaces } from "react-i18next";
@@ -29,7 +28,7 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
   const [errors, setErrors] = useState({});
 
   const [rentalAddress, setRentalAddress] = useState("");
-  const [rentalCity, setRentalCity] = useState("");
+  const [rentalCity, setRentalCity] = useState(""); // eslint-disable-line
   const [rentalPostalCode, setRentalPostalCode] = useState("");
 
   // Google Maps Address and Zip Code
@@ -66,7 +65,8 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
 
       const street = results[0].address_components[1].long_name;
       const streetNumber = results[0].address_components[0].long_name;
-      const finalAddress = `${street}, ${streetNumber}`;
+      const city = results[0].address_components[2].long_name;
+      const finalAddress = `${street}, ${streetNumber}, ${city}`;
 
       setRentalPostalCode(results[0].address_components[6].long_name);
       setRentalAddress(finalAddress);
@@ -149,31 +149,6 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
           <div className={styles.FormLeft}>
             <Input
               type="text"
-              name="rentalAddressSecond"
-              value={tenancy.propertyDetails.rentalAddressSecond}
-              label={t("F1SC.stepZero.rentalAddressSecond")}
-              placeholder={t("F1SC.stepZero.rentalAddressSecondPL")}
-              onChange={(e) => handleProperty(e)}
-              error={errors.rentalAddressSecond}
-            />
-          </div>
-        </div>
-        <div className={styles.GroupInput}>
-          <div className={styles.FormLeft}>
-            <Input
-              type="text"
-              name="rentalCity"
-              value={rentalCity}
-              label={t("F1SC.stepZero.rentalCity")}
-              placeholder={t("F1SC.stepZero.rentalCityPL")}
-              onChange={setRentalCity}
-              onSelect={handleSelect}
-              disabled
-            />
-          </div>
-          <div className={styles.FormLeft}>
-            <Input
-              type="text"
               name="rentalPostalCode"
               value={rentalPostalCode}
               label={t("F1SC.stepZero.rentalPostalCode")}
@@ -188,6 +163,17 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
           <div className={styles.FormLeft}>
             <Input
               type="text"
+              name="rentalAddressSecond"
+              value={tenancy.propertyDetails.rentalAddressSecond}
+              label={t("F1SC.stepZero.rentalAddressSecond")}
+              placeholder={t("F1SC.stepZero.rentalAddressSecondPL")}
+              onChange={(e) => handleProperty(e)}
+              error={errors.rentalAddressSecond}
+            />
+          </div>
+          <div className={styles.FormLeft}>
+            <Input
+              type="text"
               name="rentAmount"
               value={tenancy.propertyDetails.rentAmount}
               label={t("F1SC.stepZero.rentAmount")}
@@ -195,30 +181,6 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
               onChange={(e) => handleProperty(e)}
               error={errors.rentAmount}
             />
-          </div>
-          <div className={styles.FormLeft}>
-            <div className={selectStyles.selectContainer}>
-              <label className={selectStyles.selectLabel} htmlFor="product">
-                {t("F1SC.stepZero.product")}
-              </label>
-              <select
-                required
-                name="product"
-                className={selectStyles.selectInput}
-                value={tenancy.propertyDetails.product}
-                onChange={(e) => handleProperty(e)}
-              >
-                <option value="">{t("F1SC.stepZero.productPL")}</option>
-
-                <option name="product" value={t("F1SC.stepZero.productOne")}>
-                  {t("F1SC.stepZero.productOne")}
-                </option>
-
-                <option name="product" value={t("F1SC.stepZero.productTwo")}>
-                  {t("F1SC.stepZero.productTwo")}
-                </option>
-              </select>
-            </div>
           </div>
         </div>
         <div className={styles.GroupInput}>

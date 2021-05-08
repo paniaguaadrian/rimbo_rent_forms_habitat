@@ -29,7 +29,6 @@ const sendF1HAFormEmails = async (req, res) => {
     documentImageBack,
     randomID,
     // Tenancy
-    product,
     rentAmount,
     rentStartDate,
     rentEndDate,
@@ -106,7 +105,6 @@ const sendF1HAFormEmails = async (req, res) => {
       documentImageBack,
       randomID,
       // Tenancy
-      product,
       rentAmount,
       rentStartDate,
       rentEndDate,
@@ -147,7 +145,6 @@ const sendF1HAFormEmails = async (req, res) => {
       documentImageBack,
       randomID,
       // Tenancy
-      product,
       rentAmount,
       rentStartDate,
       rentEndDate,
@@ -196,7 +193,6 @@ const sendE1REmailEmails = async (req, res) => {
     documentImageBack,
     randomID,
     // Tenancy
-    product,
     rentAmount,
     rentStartDate,
     rentEndDate,
@@ -255,7 +251,6 @@ const sendE1REmailEmails = async (req, res) => {
       documentImageBack,
       randomID,
       // Tenancy
-      product,
       rentAmount,
       rentStartDate,
       rentEndDate,
@@ -358,7 +353,6 @@ const sendF2SCFormEmails = async (req, res) => {
     documentImageBack,
     randomID,
     // Tenancy
-    product,
     rentAmount,
     rentStartDate,
     rentEndDate,
@@ -449,7 +443,6 @@ const sendF2SCFormEmails = async (req, res) => {
       documentImageBack,
       randomID,
       // Tenancy
-      product,
       rentAmount,
       rentStartDate,
       rentEndDate,
@@ -494,7 +487,6 @@ const sendF2SCFormEmails = async (req, res) => {
       documentImageBack,
       randomID,
       // Tenancy
-      product,
       rentAmount,
       rentStartDate,
       rentEndDate,
@@ -535,7 +527,6 @@ const sendF2SCFormEmails = async (req, res) => {
       documentImageBack,
       randomID,
       // Tenancy
-      product,
       rentAmount,
       rentStartDate,
       rentEndDate,
@@ -594,7 +585,6 @@ const sendHAFormEmailsEn = async (req, res) => {
     documentImageBack,
     randomID,
     // Tenancy
-    product,
     rentAmount,
     rentStartDate,
     rentEndDate,
@@ -671,7 +661,6 @@ const sendHAFormEmailsEn = async (req, res) => {
       documentImageBack,
       randomID,
       // Tenancy
-      product,
       rentAmount,
       rentStartDate,
       rentEndDate,
@@ -712,7 +701,6 @@ const sendHAFormEmailsEn = async (req, res) => {
       documentImageBack,
       randomID,
       // Tenancy
-      product,
       rentAmount,
       rentStartDate,
       rentEndDate,
@@ -761,7 +749,6 @@ const sendE1REmailEmailsEn = async (req, res) => {
     documentImageBack,
     randomID,
     // Tenancy
-    product,
     rentAmount,
     rentStartDate,
     rentEndDate,
@@ -820,7 +807,6 @@ const sendE1REmailEmailsEn = async (req, res) => {
       documentImageBack,
       randomID,
       // Tenancy
-      product,
       rentAmount,
       rentStartDate,
       rentEndDate,
@@ -923,7 +909,6 @@ const sendF2SCFormEmailsEn = async (req, res) => {
     documentImageBack,
     randomID,
     // Tenancy
-    product,
     rentAmount,
     rentStartDate,
     rentEndDate,
@@ -1014,7 +999,6 @@ const sendF2SCFormEmailsEn = async (req, res) => {
       documentImageBack,
       randomID,
       // Tenancy
-      product,
       rentAmount,
       rentStartDate,
       rentEndDate,
@@ -1060,7 +1044,6 @@ const sendF2SCFormEmailsEn = async (req, res) => {
       documentImageBack,
       randomID,
       // Tenancy
-      product,
       rentAmount,
       rentStartDate,
       rentEndDate,
@@ -1101,7 +1084,6 @@ const sendF2SCFormEmailsEn = async (req, res) => {
       documentImageBack,
       randomID,
       // Tenancy
-      product,
       rentAmount,
       rentStartDate,
       rentEndDate,

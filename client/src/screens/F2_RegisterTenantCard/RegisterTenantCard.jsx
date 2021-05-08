@@ -329,12 +329,7 @@ const RegisterTenantCard = ({ t }) => {
                           className={style.tarjeta}
                         />
 
-                        {tenancyData.product === "1 month" ||
-                        tenancyData.product === "1 mes" ? (
-                          <p>{t("F2TT.warningcreditcardOne")}</p>
-                        ) : (
-                          <p>{t("F2TT.warningcreditcardTwo")}</p>
-                        )}
+                        <p>{t("F2TT.warningcreditcardOne")}</p>
                       </label>
 
                       <div className={style.ErrorInput}>

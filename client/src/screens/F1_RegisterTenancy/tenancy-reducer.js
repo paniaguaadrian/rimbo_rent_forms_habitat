@@ -17,7 +17,6 @@ export const DefaultTenancy = {
     rentAmount: "",
     rentStartDate: "",
     rentEndDate: "",
-    product: "",
   },
 
   tenantContactDetails: {

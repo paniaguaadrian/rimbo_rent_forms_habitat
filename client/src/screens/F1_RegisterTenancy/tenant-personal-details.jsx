@@ -125,7 +125,6 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
         documentImageBack: data.tenant.documentImageBack,
         randomID: data.tenant.randomID,
         //  Tenancy
-        product: data.product,
         rentAmount: data.rentAmount,
         rentStartDate: data.rentStartDate.slice(0, 10),
         rentEndDate: data.rentEndDate.slice(0, 10),
@@ -152,7 +151,6 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
         documentImageBack: data.tenant.documentImageBack,
         randomID: data.tenant.randomID,
         //  Tenancy
-        product: data.product,
         rentAmount: data.rentAmount,
         rentStartDate: data.rentStartDate.slice(0, 10),
         rentEndDate: data.rentEndDate.slice(0, 10),
@@ -210,7 +208,6 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
         propertyManagerName: tenancy.agencyName,
         randomID: randomID,
         //  Tenancy
-        product: tenancy.propertyDetails.product,
         rentAmount: tenancy.propertyDetails.rentAmount,
         rentStartDate: tenancy.propertyDetails.rentStartDate,
         rentEndDate: tenancy.propertyDetails.rentEndDate,
