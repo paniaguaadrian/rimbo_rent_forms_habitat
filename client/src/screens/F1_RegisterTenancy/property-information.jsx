@@ -117,6 +117,7 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
                     label={t("F1SC.stepZero.renalAddress")}
                     placeholder={t("F1SC.stepZero.renalAddressPL")}
                     required
+                    error={errors.rentalAddress}
                   />
                   <div className={styles.GoogleSuggestionContainer}>
                     {/* display sugestions */}
